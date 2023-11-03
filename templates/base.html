@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evil-X Shell Web</title>
+</head>
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/bootstrap.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='/fontawesome/css/all.min.css') }}">
+
+<body class="hold-transition layout-top-nav dark-mode">
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand-md navbar-dark navbar-dark" style="position: sticky; top: 0px">
+            <div class="container">
+            <div class="collapse navbar-collapse order-3" id="navbarCollapse"></div>
+            <h3 class="text-center" style="font-family: Gabriola;"><a href="/"><span style="color: aquamarine;">Remote Hacked Resources(RHR)</span> ~ <span style="color: rgb(230, 129, 42)">N3W Cyber Army</span></a></h3>
+            </div>
+    </nav>
+    <!-- /.navbar -->
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+        <br>
+
+        <!-- Main content -->
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-1"></div>
+
+                    {% block col %}
+
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+<script src="{{ url_for('static', filename='/js/bootstrap.js') }}"></script>
+
+</html>
