@@ -11,8 +11,6 @@
 #   ███    ███   ███    ███
 # ▄█████████▀    ██████████
 #
-#                      Black Cobra Hackers Group..!
-#                  "Our Dream Is Being Your Nightmare!!!!"
 
 import socket
 import os
