@@ -43,12 +43,6 @@ SCREENSHOT_DIRECTORY = 'Screenshot'
 DOWNLOAD_DIRECTORY = 'Download'
 AUDIO_RECORD_DIRECTORY = 'Audio Record'
 
-app_password = getpass.getpass('Enter script password to continue: ')
-if app_password != 'wahidgirmay':
-    print('Incorrect Password.... existing system')
-    time.sleep(1)
-    sys.exit()
-
 if platform.system() == 'Windows':
     os.system('cls')
 if platform.system() == 'Linux':
