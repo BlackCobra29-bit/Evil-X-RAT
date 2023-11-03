@@ -4,7 +4,7 @@
 #
 # ▀█████████▄     ▄████████
 #   ███    ███   ███    ███         Tool Title: Evil-X Shell
-#   ███    ███   ███    █▀          Author: Black Cobra Hackers Group
+#   ███    ███   ███    █▀          Author: Tesfahiwet Truneh
 #   ███▄▄▄██▀    ███                Year of Dev't: 2023
 #   ███▀▀▀██▄    ███                GitHub: https://github.com/BlackCobra29-bit
 #   ███    ██▄   ███    █▄
